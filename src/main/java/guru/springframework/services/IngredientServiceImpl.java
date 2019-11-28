@@ -111,7 +111,7 @@ public class IngredientServiceImpl implements IngredientService {
     }
 
     @Override
-    public Mono<Void> deleteById(String recipeId, String idToDelete) {
+    public void deleteById(String recipeId, String idToDelete) {
 
         log.debug("Deleting ingredient: " + recipeId + ":" + idToDelete);
 
@@ -136,7 +136,5 @@ public class IngredientServiceImpl implements IngredientService {
         } else {
             log.debug("Recipe Id Not found. Id:" + recipeId);
         }
-
-        return Mono.empty();
     }
 }
