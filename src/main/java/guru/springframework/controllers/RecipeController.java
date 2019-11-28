@@ -61,7 +61,7 @@ public class RecipeController {
 
         webDataBinder.validate();
         BindingResult bindingResult = webDataBinder.getBindingResult();
-        
+
         if(bindingResult.hasErrors()){
 
             bindingResult.getAllErrors().forEach(objectError -> {
